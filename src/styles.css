@@ -1,0 +1,114 @@
+body {
+  font-family: 'Comfortaa', cursive;
+  margin-bottom: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+.main-heading {
+  font-size: 22px;
+  padding-left: 5px;
+}
+
+.section {
+  display: flex; 
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.section div {
+  width: 400px;
+}
+
+.section .heading {
+  font-size: 45px;
+  font-weight: 700;
+  margin: 0 4px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 15px 10px;
+}
+
+.row span {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.row input {
+  padding: 10px;
+  outline: 0;
+  border: 0;
+  transition: 150ms ease-in;
+  background-color: rgba(244, 244, 244, 0.7);
+}
+
+.row input:hover,
+.row input:focus,
+.row input:active {
+  cursor: pointer;
+  background-color: rgba(244, 244, 244, 0.9);
+}
+
+.purple-bg {
+  background-color: purple;
+  color: white;
+}
+
+.gainsboro-bg {
+  background-color: gainsboro;
+}
+
+.white-bg {
+  background-color: white;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr 2fr;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.main-nav a {
+  padding: 5px;
+}
+
+.main-nav a:hover {
+  background-color: rgba(244, 244, 244, 0.7);
+}
+
+.main-nav a:active {
+  background-color: rgba(244, 244, 244, 0.9);
+}
+
+a:active, a:visited {
+  color: black;
+}
+
+.benefits > section {
+  max-height: 100vh;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+
+.benefits > section.hidden {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.benefits > h3 {
+  cursor: pointer;
+}
