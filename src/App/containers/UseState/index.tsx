@@ -5,8 +5,6 @@ export const UseState = () => {
 
   return (
     <article>
-      <h3>UseState</h3>
-
       <section className="row">
         <input
           type="text"

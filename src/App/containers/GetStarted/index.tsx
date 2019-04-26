@@ -3,7 +3,6 @@ import * as React from 'react';
 export const GetStarted = () => {
   return (
     <article>
-      <h2>GetStarted</h2>
       <section>
         <h3>What is this all about</h3>
         <p>

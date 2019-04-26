@@ -11,7 +11,6 @@ export const UseCustomHook = () => {
 
   return (
     <article>
-      <h3>Custom Hook in action</h3>
       <section className="row">
         <span>Title</span>
         <input {...title} />

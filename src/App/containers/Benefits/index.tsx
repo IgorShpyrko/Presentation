@@ -1,14 +1,11 @@
 import * as React from 'react';
 
-export const Benefits = (props: any) => {
-  console.log('props :', props);
+export const Benefits = () => {
   const [isVisibleJS, setIsVisibleJS] = React.useState(true);
   const [isVisibleReact, setIsVisibleReact] = React.useState(true);
 
   return (
     <article className='benefits'>
-      <h2>Benefits</h2>
-
       <h3
         onClick={() => setIsVisibleJS(!isVisibleJS)}>
           <span>{isVisibleJS ? '- ' : '+ '}</span>

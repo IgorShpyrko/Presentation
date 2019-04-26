@@ -19,8 +19,6 @@ export const UseContext = () => {
 
   return (
     <article>
-      <h3>UseContext</h3>
-
       <section className={`row ${theme.light}`}>
         <span>Name</span>
         <input type="text" value={name} onChange={handleNameChange} />

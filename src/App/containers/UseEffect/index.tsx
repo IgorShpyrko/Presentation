@@ -36,8 +36,6 @@ export const UseEffect = () => {
 
   return (
     <article>
-      <h3>UseEffect</h3>
-
       <section className="row">
         <span>Name</span>
         <input type="text" value={name} onChange={handleNameChange} />
