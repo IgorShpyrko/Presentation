@@ -1,4 +1,7 @@
 import * as React from 'react';
+import { StoreContext } from 'redux-react-hook';
+import { store } from 'src/store';
+
 // import { BrowserRouter, Route, Redirect,  Switch, } from 'react-router-dom';
 
 import { Nav } from 'src/App/containers/Nav';
@@ -90,28 +93,30 @@ export const App = () => {
   });
 
   return (
-    <div className='app-wrapper'>
-      <h2>
-        {locations.map((item, idx) => {
-          if (item.path === selected) {
-            return item.name
-          }
-          return null
-        })}
-      </h2>
-      <div className='app-container'>
-        <Nav select={handleSelect} locations={locations} selected={selected}/>
+    <StoreContext.Provider value={store}>
+      <div className='app-wrapper'>
+        <h2>
           {locations.map((item, idx) => {
             if (item.path === selected) {
-              return (
-                <React.Fragment key={idx}>
-                  {item.component}
-                </React.Fragment>
-              )
+              return item.name
             }
             return null
           })}
+        </h2>
+        <div className='app-container'>
+          <Nav select={handleSelect} locations={locations} selected={selected}/>
+            {locations.map((item, idx) => {
+              if (item.path === selected) {
+                return (
+                  <React.Fragment key={idx}>
+                    {item.component}
+                  </React.Fragment>
+                )
+              }
+              return null
+            })}
+        </div>
       </div>
-    </div>
+    </StoreContext.Provider>
   );
 };
