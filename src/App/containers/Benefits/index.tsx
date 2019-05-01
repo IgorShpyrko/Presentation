@@ -7,6 +7,12 @@ export const Benefits = () => {
   return (
     <article className='benefits'>
       <h3
+        tabIndex={0}
+        onKeyDown={e => {
+          e.keyCode === 13
+            ? setIsVisibleJS(!isVisibleJS)
+            : null
+        }}
         onClick={() => setIsVisibleJS(!isVisibleJS)}>
           <span>{isVisibleJS ? '- ' : '+ '}</span>
           <span>Why Not to use ES6 classes</span>
@@ -55,6 +61,12 @@ export const Benefits = () => {
       </section>
 
       <h3
+        tabIndex={0}
+        onKeyDown={e => {
+          e.keyCode === 13
+            ? setIsVisibleReact(!isVisibleReact)
+            : null
+        }}
         onClick={() => setIsVisibleReact(!isVisibleReact)}>
           <span>{isVisibleReact ? '- ' : '+ '}</span>
           <span>React Motivation</span>
@@ -161,3 +173,4 @@ export const Benefits = () => {
     </article>
   );
 };
+  

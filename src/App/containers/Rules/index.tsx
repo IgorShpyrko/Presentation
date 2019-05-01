@@ -2,14 +2,17 @@ import * as React from 'react';
 
 export const Rules = () => {
   return (
-    <div>
-      <h3>Only Call Hooks at the Top Level</h3>
-      <strong>Don’t call Hooks inside loops, conditions, or nested functions.</strong>
+    <article className='rules'>
+      <section>
+        <h3>Only Call Hooks at the Top Level</h3>
+        <strong>Don’t call Hooks inside loops, conditions, or nested functions.</strong>
+      </section>
 
       <br/>
-
-      <h3>Only Call Hooks from React Functions</h3>
-      <strong>Don’t call Hooks from regular JavaScript functions.</strong>
-    </div>
+      <section>
+        <h3>Only Call Hooks from React Functions</h3>
+        <strong>Don’t call Hooks from regular JavaScript functions.</strong>
+      </section>
+    </article>
   );
 };

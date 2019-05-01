@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export const GetStarted = () => {
   return (
-    <article>
+    <article className='get-started'>
       <section>
         <h3>What is this all about</h3>
         <p>

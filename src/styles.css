@@ -1,51 +1,31 @@
 body {
   font-family: 'Comfortaa', cursive;
-  margin-bottom: 50px;
+  margin-bottom: 4em;
   padding: 0;
   margin: 0;
 }
 
 .main-heading {
-  font-size: 22px;
-  padding-left: 5px;
-}
-
-.section {
-  display: flex; 
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 10px;
-}
-
-.section div {
-  width: 400px;
-}
-
-.section .heading {
-  font-size: 45px;
-  font-weight: 700;
-  margin: 0 4px;
+  font-size: 1.4em;
+  padding-left: 0.3em;
 }
 
 .row {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
-  margin: 15px 10px;
+  margin: 1em 0.7em;
 }
 
 .row span {
-  font-size: 18px;
+  font-size: 1.1em;
   font-weight: 700;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 5px;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  margin-left: 0.3em;
 }
 
 .row input {
-  padding: 10px;
+  padding: 0.5em;
   outline: 0;
   border: 0;
   transition: 150ms ease-in;
@@ -74,16 +54,24 @@ body {
 
 .app-container {
   display: grid;
-  grid-template-columns: 1fr 5fr 2fr;
+  grid-template-columns: 2fr 3fr 3fr 2fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  padding: 2em;
+}
+
+.get-started, .rules, .benefits {
+  grid-column-start: 2; 
+  grid-column-end: 4; 
 }
 
 .main-nav {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 0.5em;
 }
 .main-nav a {
-  padding: 5px;
+  padding: 0.3em;
 }
 
 .main-nav a:hover {
