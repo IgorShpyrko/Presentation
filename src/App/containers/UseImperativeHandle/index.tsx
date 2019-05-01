@@ -18,7 +18,7 @@ const FancyInput = React.forwardRef<Handler>((props, ref) => {
   return <input ref={inputRef} type="text" />;
 });
 
-export const UseImperativeHandle = () => {
+const UseImperativeHandle = () => {
   const ref = React.useRef({} as Handler);
 
   return (
@@ -39,5 +39,7 @@ export const UseImperativeHandle = () => {
         </p>
       </section>
     </article>
-  )
-}
+  );
+};
+
+export default UseImperativeHandle;

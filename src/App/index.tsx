@@ -2,29 +2,28 @@ import * as React from 'react';
 import { StoreContext } from 'redux-react-hook';
 import { store } from 'src/store';
 
-import { Nav } from 'src/App/containers/Nav';
-import { GetStarted } from 'src/App/containers/GetStarted';
-import { Benefits } from 'src/App/containers/Benefits';
-import { Rules } from 'src/App/containers/Rules';
-import { UseState } from 'src/App/containers/UseState';
-import { UseEffect } from 'src/App/containers/UseEffect';
-import { UseContext } from 'src/App/containers/UseContext';
-import { UseCustomHook } from 'src/App/containers/UseCustomHook';
-import { UseReducer } from 'src/App/containers/UseReducer';
-import { UseCallback } from 'src/App/containers/UseCallback';
-import { UseMemo } from 'src/App/containers/UseMemo';
-import { UseRef } from 'src/App/containers/UseRef';
-import { ForwardRef } from 'src/App/containers/ForwardRef';
-import { UseImperativeHandle } from 'src/App/containers/UseImperativeHandle';
-import { UseLayoutEffect } from 'src/App/containers/UseLayoutEffect';
-import { UseDebugValue } from 'src/App/containers/UseDebugValue';
+const Nav = React.lazy(() => import('src/App/containers/Nav'));
+const GetStarted = React.lazy(() => import('src/App/containers/GetStarted'));
+const Benefits = React.lazy(() => import('src/App/containers/Benefits'));
+const Rules = React.lazy(() => import('src/App/containers/Rules'));
+const UseState = React.lazy(() => import('src/App/containers/UseState'));
+const UseEffect = React.lazy(() => import('src/App/containers/UseEffect'));
+const UseContext = React.lazy(() => import('src/App/containers/UseContext'));
+const UseCustomHook = React.lazy(() => import('src/App/containers/UseCustomHook'));
+const UseReducer = React.lazy(() => import('src/App/containers/UseReducer'));
+const UseCallback = React.lazy(() => import('src/App/containers/UseCallback'));
+const UseMemo = React.lazy(() => import('src/App/containers/UseMemo'));
+const UseRef = React.lazy(() => import('src/App/containers/UseRef'));
+const ForwardRef = React.lazy(() => import('src/App/containers/ForwardRef'));
+const UseImperativeHandle = React.lazy(() => import('src/App/containers/UseImperativeHandle'));
+const UseLayoutEffect = React.lazy(() => import('src/App/containers/UseLayoutEffect'));
+const UseDebugValue = React.lazy(() => import('src/App/containers/UseDebugValue'));
 
 const locations: {
   path: string,
   component: any,
   name: string,
 }[] = [
-  // {path: '/',                 component: React.lazy(() => import('src/App/containers/GetStarted')),          name: 'Get Started' },
   {path: '/',                 component: <GetStarted />,          name: 'Get Started' },
   {path: '/benefits',         component: <Benefits />,            name: 'Benefits' },
   {path: '/rules',            component: <Rules />,               name: 'Rules' },
@@ -105,17 +104,19 @@ export const App = () => {
           })}
         </h2>
         <div className='app-container'>
-          <Nav select={handleSelect} locations={locations} selected={selected}/>
-            {locations.map((item, idx) => {
-              if (item.path === selected) {
-                return (
-                  <React.Fragment key={idx}>
-                    {item.component}
-                  </React.Fragment>
-                )
-              }
-              return null
-            })}
+          <React.Suspense fallback={<div>Loading...</div>}>
+            <Nav select={handleSelect} locations={locations} selected={selected}/>
+              {locations.map((item, idx) => {
+                if (item.path === selected) {
+                  return (
+                    <React.Fragment key={idx}>
+                        {item.component}
+                    </React.Fragment>
+                  )
+                }
+                return null
+              })}
+          </React.Suspense>
         </div>
       </div>
     </StoreContext.Provider>

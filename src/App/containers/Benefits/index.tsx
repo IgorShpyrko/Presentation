@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export const Benefits = () => {
+const Benefits = () => {
   const [isVisibleJS, setIsVisibleJS] = React.useState(true);
   const [isVisibleReact, setIsVisibleReact] = React.useState(true);
 
@@ -173,4 +173,5 @@ export const Benefits = () => {
     </article>
   );
 };
-  
+
+export default Benefits;

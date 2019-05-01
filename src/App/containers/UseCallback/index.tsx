@@ -15,7 +15,7 @@ const colors = [
   'yellow',
 ];
 
-export const UseCallback = () => {
+const UseCallback = () => {
   const [withCallback, setWithCallBack] = React.useState(false);
   const [value, setValue] = React.useState('');
   const [color, setColor] = React.useState(colors[0]);
@@ -60,3 +60,5 @@ const ChildComponent = (props: any) => {
     </div>
   )
 };
+
+export default UseCallback;

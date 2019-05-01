@@ -5,7 +5,7 @@ const initialState = {
   count: 0
 };
 
-export const UseReducer = () => {
+const UseReducer = () => {
   const [state, dispatch] = React.useReducer(reducer, initialState);
 
   const _dispatch = useDispatch();
@@ -48,3 +48,5 @@ function reducer(state: any, action: any) {
       throw new Error();
   }
 };
+
+export default UseReducer;

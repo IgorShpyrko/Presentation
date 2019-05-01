@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { ThemeContext, LocaleContext } from 'src/context';
 
-export const UseContext = () => {
+const UseContext = () => {
   const [name, setName] = React.useState('Albus Dumbledore');
   const [age, setAge] = React.useState(175);
 
@@ -33,4 +33,6 @@ export const UseContext = () => {
       </section>
     </article>
   );
-}
+};
+
+export default UseContext;

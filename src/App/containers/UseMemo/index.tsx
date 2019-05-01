@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export const UseMemo = () => {
+const UseMemo = () => {
   const [count, setCount] = React.useState(0);
   const [wordIndex, setWordIndex] = React.useState(0);
 
@@ -40,5 +40,7 @@ export const UseMemo = () => {
         <button onClick={() => setCount(count + 1)}>Increment</button>
       </section>
     </article>
-  )
-}
+  );
+};
+
+export default UseMemo;

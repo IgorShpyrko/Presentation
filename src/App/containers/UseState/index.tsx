@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 
-export const  UseState = () => {
+const UseState = () => {
   return (
     <>
       <UseStateFunction />
@@ -63,3 +63,5 @@ export class UseStateClass extends React.Component {
     );
   }
 };
+
+export default UseState;

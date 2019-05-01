@@ -11,7 +11,7 @@ type Props = {
   selected: string;
 }
 
-export const Nav = (props: Props) => {
+const Nav = (props: Props) => {
   const { select, locations, selected } = props;
 
   return (
@@ -28,3 +28,5 @@ export const Nav = (props: Props) => {
     </aside>
   )
 }
+
+export default Nav;

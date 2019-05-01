@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export const GetStarted = () => {
+const GetStarted = () => {
   return (
     <article className='get-started'>
       <section>
@@ -20,3 +20,5 @@ export const GetStarted = () => {
     </article>
   );
 };
+
+export default GetStarted;

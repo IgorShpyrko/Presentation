@@ -3,7 +3,7 @@ import { useWindowWidth } from 'src/Hooks/useWindowWidth';
 import { useDocumentTitle } from 'src/Hooks/useDocumentTitle';
 import { useFormInput } from 'src/Hooks/useFormInput';
 
-export const UseCustomHook = () => {
+const UseCustomHook = () => {
   const width = useWindowWidth();
   const title = useFormInput('Heading');
   const designation = useFormInput('Software Engineer');
@@ -24,5 +24,7 @@ export const UseCustomHook = () => {
         <input type="text" value={width} disabled />
       </section>
     </article>
-);
+  );
 };
+
+export default UseCustomHook;

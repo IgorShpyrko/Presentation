@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export const Rules = () => {
+const Rules = () => {
   return (
     <article className='rules'>
       <section>
@@ -16,3 +16,5 @@ export const Rules = () => {
     </article>
   );
 };
+
+export default Rules;

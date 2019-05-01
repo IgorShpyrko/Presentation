@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export const UseRef = () => {
+const UseRef = () => {
   const inputEl = React.useRef<HTMLInputElement>(null);
 
   const onButtonClick = () => {
@@ -17,5 +17,7 @@ export const UseRef = () => {
         <button onClick={onButtonClick}>Focus the input</button>
       </section>
     </article>
-  )
-}
+  );
+};
+
+export default UseRef;
