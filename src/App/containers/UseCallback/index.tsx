@@ -1,6 +1,8 @@
 import * as React from 'react';
 
 const colors = [
+  'aliceblue',
+  'aqua',
   'red',
   'green',
   'blue',
@@ -18,8 +20,6 @@ export const UseCallback = () => {
 
   const callBack = React.useCallback(
     () => {
-      console.log('setColor')
-      console.log(Math.random() * colors.length)
       setColor(colors[(Math.random() * colors.length).toFixed(0)])
     },
     [value],
@@ -29,7 +29,13 @@ export const UseCallback = () => {
     <article>
       <section className='row'>
         <input type="text" value={value} onChange={handleChange}/>
-        <p>{color}</p>
+        <div style={{
+          backgroundColor: `${color}`,
+          width: '100px',
+          height: '100px',
+          margin: '10px',
+          }}>
+        </div>
       </section>
     </article>
   )

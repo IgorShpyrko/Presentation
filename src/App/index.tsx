@@ -2,8 +2,6 @@ import * as React from 'react';
 import { StoreContext } from 'redux-react-hook';
 import { store } from 'src/store';
 
-// import { BrowserRouter, Route, Redirect,  Switch, } from 'react-router-dom';
-
 import { Nav } from 'src/App/containers/Nav';
 import { GetStarted } from 'src/App/containers/GetStarted';
 import { Benefits } from 'src/App/containers/Benefits';
@@ -16,6 +14,7 @@ import { UseReducer } from 'src/App/containers/UseReducer';
 import { UseCallback } from 'src/App/containers/UseCallback';
 import { UseMemo } from 'src/App/containers/UseMemo';
 import { UseRef } from 'src/App/containers/UseRef';
+import { ForwardRef } from 'src/App/containers/ForwardRef';
 import { UseImperativeHandle } from 'src/App/containers/UseImperativeHandle';
 import { UseLayoutEffect } from 'src/App/containers/UseLayoutEffect';
 import { UseDebugValue } from 'src/App/containers/UseDebugValue';
@@ -25,6 +24,7 @@ const locations: {
   component: any,
   name: string,
 }[] = [
+  // {path: '/',                 component: React.lazy(() => import('src/App/containers/GetStarted')),          name: 'Get Started' },
   {path: '/',                 component: <GetStarted />,          name: 'Get Started' },
   {path: '/benefits',         component: <Benefits />,            name: 'Benefits' },
   {path: '/rules',            component: <Rules />,               name: 'Rules' },
@@ -36,6 +36,7 @@ const locations: {
   {path: '/callback',         component: <UseCallback />,         name: 'UseCallback' },
   {path: '/memo',             component: <UseMemo />,             name: 'UseMemo' },
   {path: '/ref',              component: <UseRef />,              name: 'UseRef' },
+  {path: '/forwardref',       component: <ForwardRef />,          name: 'ForwardRef' },
   {path: '/imperativeHandle', component: <UseImperativeHandle />, name: 'UseImperativeHandle' },
   {path: '/layoutEffect',     component: <UseLayoutEffect />,     name: 'UseLayoutEffect' },
   {path: '/debugValue',       component: <UseDebugValue />,       name: 'UseDebugValue' },
