@@ -17,6 +17,11 @@ const GetStarted = () => {
         </p>
         <p></p>
       </section>
+      <img
+        src='src/assets/hooks.jpg'
+        style={{width: '100%'}}
+        alt="Hooks"
+      />
     </article>
   );
 };

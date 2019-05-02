@@ -6,7 +6,7 @@ const UseLayoutEffect = () => {
       <h3>UseEffect && UseLayoutEffect</h3>
       <section className='row'>
         <p>
-          
+           In common these effects are equal.
         </p>
         <p>The main difference is time when effect fires.</p>
         <p>

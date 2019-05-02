@@ -99,6 +99,7 @@ a, a:hover, a:active, a:visited {
 
 .benefits > h3 {
   cursor: pointer;
+  margin-top: 0;
 }
 
 .app-wrapper > h2 {

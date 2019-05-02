@@ -1,8 +1,9 @@
 import * as React from 'react';
 
 const Benefits = () => {
-  const [isVisibleJS, setIsVisibleJS] = React.useState(true);
-  const [isVisibleReact, setIsVisibleReact] = React.useState(true);
+  const [isVisibleJS, setIsVisibleJS] = React.useState(false);
+  const [isVisibleReact, setIsVisibleReact] = React.useState(false);
+  const [isVisiblePic, setIsVisiblePic] = React.useState(false);
 
   return (
     <article className='benefits'>
@@ -17,7 +18,6 @@ const Benefits = () => {
           <span>{isVisibleJS ? '- ' : '+ '}</span>
           <span>Why Not to use ES6 classes</span>
       </h3>
-
       <section className={isVisibleJS ? '' : 'hidden'}>
         <div>
           <h4>New</h4>
@@ -169,7 +169,22 @@ const Benefits = () => {
             learn complex functional or reactive programming techniques.
           </p>
         </div>
-      </section>  
+      </section> 
+      <h3
+        tabIndex={0}
+        onKeyDown={e => {
+          e.keyCode === 13
+            ? setIsVisiblePic(!isVisiblePic)
+            : null
+        }}
+        onClick={() => setIsVisiblePic(!isVisiblePic)}>
+          <span>{isVisiblePic ? '- ' : '+ '}</span>
+          <span>In any case...</span>
+      </h3>
+
+      <section className={isVisiblePic ? '' : 'hidden'}>
+        <img src='src/assets/choise.jpg' alt=""/>
+      </section>
     </article>
   );
 };
