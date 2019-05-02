@@ -19,11 +19,13 @@ const UseCallback = () => {
   const [withCallback, setWithCallBack] = React.useState(false);
   const [value, setValue] = React.useState('');
   const [color, setColor] = React.useState(colors[0]);
+  const [current, setCurrent] = React.useState('');
 
   const handleChange = (e: any) => {
     setValue(e.target.value);
     const idx = (Math.random() * (colors.length - 1)).toFixed(0);
     setColor(colors[idx]);
+    setCurrent(colors[idx]);
   }
 
   const callBack = React.useCallback(
@@ -31,6 +33,7 @@ const UseCallback = () => {
       setValue(e.target.value);
       const idx = (Math.random() * (colors.length - 1)).toFixed(0);
       setColor(colors[idx]);
+      setCurrent(colors[idx]);
     },
     [value],
   );
@@ -42,10 +45,20 @@ const UseCallback = () => {
           {withCallback ? 'WithCallBack' : 'No callBack'}
         </button>
         <p>{color}</p>
+        <p>current: {current}</p>
         <ChildComponent
           value={value}
           change={withCallback ? callBack : handleChange} />
         <div style={{backgroundColor: color, width: '100px', height: '100px'}}></div>
+      </section>
+      <section>
+        <p>
+          When no arguments are passed to callBack function, the function
+          itself doesn`t change. And we see the first state of our application.
+          When adding argument. the function is changed after each
+          argument`s change. This prevents from unnecessary creating of
+          functions if values didn`t change
+        </p>
       </section>
     </article>
   )

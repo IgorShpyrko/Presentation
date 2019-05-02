@@ -14,6 +14,8 @@ const UseCustomHook = () => {
       <section className="row">
         <span>Title</span>
         <input {...title} />
+        {/* Shorthand for: */}
+        {/* <input value={title.value} onChange={title.onChange} /> */}
       </section>
       <section className="row">
         <span>Designation</span>

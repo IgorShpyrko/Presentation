@@ -3,13 +3,13 @@ import * as React from 'react';
 const UseEffect = () => {
   return (
     <>
-      <UseEffectNoClass />
-      <UseEffectWithClass />
+      <UseEffectFunction />
+      <UseEffectClass />
     </>
   );
 };
 
-export const UseEffectNoClass = () => {
+export const UseEffectFunction = () => {
   const [name, setName] = React.useState<string>('Albus Dumbledore');
   const [age, setAge] = React.useState<string | number>(175);
   const [height, setHeight] = React.useState<number>(window.innerHeight);
@@ -69,7 +69,7 @@ export const UseEffectNoClass = () => {
 };
 
 
-export class UseEffectWithClass extends React.Component{
+export class UseEffectClass extends React.Component {
   state: {
     name: string;
     age: number | string;
@@ -82,7 +82,8 @@ export class UseEffectWithClass extends React.Component{
       name: 'Albus Dumbledore',
       age: 175,
       height: window.innerHeight
-    }
+    };
+    
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleResize = this.handleResize.bind(this);
   }
@@ -137,12 +138,6 @@ export class UseEffectWithClass extends React.Component{
         <section className="row">
           <span>Height</span>
           <input type="text" value={height} disabled />
-        </section>
-        <section>
-          <p>P.S.:</p>
-          <p>if you skip array as second parametr - effect will be done on every rerender</p>
-          <p>if array is empty - effect will run as component did mount</p>
-          <p>if array is filled with value - effect will run as value did mount and did update</p>
         </section>
       </article>
     );

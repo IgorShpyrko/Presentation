@@ -14,7 +14,6 @@ const UseReducer = React.lazy(() => import('src/App/containers/UseReducer'));
 const UseCallback = React.lazy(() => import('src/App/containers/UseCallback'));
 const UseMemo = React.lazy(() => import('src/App/containers/UseMemo'));
 const UseRef = React.lazy(() => import('src/App/containers/UseRef'));
-const ForwardRef = React.lazy(() => import('src/App/containers/ForwardRef'));
 const UseImperativeHandle = React.lazy(() => import('src/App/containers/UseImperativeHandle'));
 const UseLayoutEffect = React.lazy(() => import('src/App/containers/UseLayoutEffect'));
 const UseDebugValue = React.lazy(() => import('src/App/containers/UseDebugValue'));
@@ -35,7 +34,6 @@ const locations: {
   {path: '/callback',         component: <UseCallback />,         name: 'UseCallback' },
   {path: '/memo',             component: <UseMemo />,             name: 'UseMemo' },
   {path: '/ref',              component: <UseRef />,              name: 'UseRef' },
-  {path: '/forwardref',       component: <ForwardRef />,          name: 'ForwardRef' },
   {path: '/imperativeHandle', component: <UseImperativeHandle />, name: 'UseImperativeHandle' },
   {path: '/layoutEffect',     component: <UseLayoutEffect />,     name: 'UseLayoutEffect' },
   {path: '/debugValue',       component: <UseDebugValue />,       name: 'UseDebugValue' },

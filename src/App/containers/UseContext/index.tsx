@@ -31,6 +31,23 @@ const UseContext = () => {
         <span>Age</span>
         <input type="text" value={locale.foreign} disabled />
       </section>
+      <p><i>to learn more:</i></p>
+      <p>
+        <a
+          style={{textDecoration: 'none'}}
+          target='blank' 
+          href="https://daveceddia.com/usecontext-hook/">
+          <strong>useContext </strong><i>by Dave Cedia</i>
+        </a>
+      </p>
+      <p>
+        <a
+          style={{textDecoration: 'none'}}
+          target='blank' 
+          href="https://habr.com/ru/post/419449/">
+          <strong>Redux против React Context API </strong><i>by Dave Cedia</i>
+        </a>
+      </p>
     </article>
   );
 };
