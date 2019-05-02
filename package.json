@@ -13,7 +13,7 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "test": "",
-    "build": "npx webpack --config webpack.config.js"
+    "build": "webpack --mode production"
   },
   "dependencies": {
     "css-loader": "^2.1.1",
