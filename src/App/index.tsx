@@ -108,7 +108,7 @@ export const App = () => {
                 if (item.path === selected) {
                   return (
                     <React.Fragment key={idx}>
-                        {item.component}
+                      {item.component}
                     </React.Fragment>
                   )
                 }

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 
 type Props = {
   select: (val?: string) => void;
@@ -21,7 +20,9 @@ const Nav = (props: Props) => {
           const style = (loc.path === selected) ? {backgroundColor: 'rgb(200, 200, 200)'} : {};
           
           return (
-            <Link style={style} key={idx} to={loc.path} onClick={() =>select(loc.path)}><span>{loc.name}</span></Link>
+            <span style={style} key={idx} onClick={() =>select(loc.path)}>
+              {loc.name}
+            </span>
           )
         })}
       </nav>

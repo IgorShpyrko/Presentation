@@ -70,15 +70,16 @@ body {
   flex-direction: column;
   padding: 0.5em;
 }
-.main-nav a {
+.main-nav span {
   padding: 0.3em;
+  cursor: pointer;
 }
 
-.main-nav a:hover {
+.main-nav span:hover {
   background-color: rgba(244, 244, 244, 0.7);
 }
 
-.main-nav a:active {
+.main-nav span:active {
   background-color: rgba(244, 244, 244, 0.9);
 }
 

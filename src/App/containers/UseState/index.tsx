@@ -19,7 +19,7 @@ export const UseStateFunction = () => {
     setCount(prevCount => {
       return prevCount + 1
     })
-  }
+  };
 
   return (
     <article>
