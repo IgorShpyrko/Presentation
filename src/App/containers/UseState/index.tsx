@@ -9,7 +9,7 @@ const UseState = () => {
   )
 }
 
-// Function component
+// Functional component
 
 export const UseStateFunction = () => {
   const [text, setText] = React.useState<string>('');

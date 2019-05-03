@@ -25,7 +25,7 @@ const UseCallback = () => {
     setValue(e.target.value);
     const idx = (Math.random() * (colors.length - 1)).toFixed(0);
     setColor(colors[idx]);
-    setCurrent(colors[idx]);
+    setCurrent(color);
   }
 
   const callBack = React.useCallback(
@@ -33,7 +33,7 @@ const UseCallback = () => {
       setValue(e.target.value);
       const idx = (Math.random() * (colors.length - 1)).toFixed(0);
       setColor(colors[idx]);
-      setCurrent(colors[idx]);
+      setCurrent(color);
     },
     [value],
   );
@@ -45,7 +45,7 @@ const UseCallback = () => {
           {withCallback ? 'WithCallBack' : 'No callBack'}
         </button>
         <p>{color}</p>
-        <p>current: {current}</p>
+        <p>state value: {current}</p>
         <ChildComponent
           value={value}
           change={withCallback ? callBack : handleChange} />
